@@ -1,0 +1,10 @@
+.element__like {
+    width: 22px;
+    height: 19px;
+    margin-top: 5px;
+}
+
+.element__like:hover {
+    opacity: .5;
+    cursor: pointer;
+}

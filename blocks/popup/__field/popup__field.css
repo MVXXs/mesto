@@ -1,0 +1,7 @@
+.popup__field {
+    padding-top: 30px;
+}
+
+.popup__field:first-of-type{
+    padding: 0;
+}
