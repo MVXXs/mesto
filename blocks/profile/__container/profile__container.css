@@ -1,4 +1,5 @@
 .profile__container {
     display: flex;
     max-width: 336px;
+    justify-content: center;
 }
