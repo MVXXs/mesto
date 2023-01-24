@@ -1,8 +1,8 @@
 let btnPopupOpen = document.querySelector(".profile__button-edit");
 let popupContainer = document.querySelector(".popup");
 let btnPopupClose = document.querySelector(".popup__closed")
-let TitleDefaultText = document.querySelector(".profile__title");
-let SubtitleDefaultText = document.querySelector(".profile__subtitle");
+let titleDefaultText = document.querySelector(".profile__title");
+let subtitleDefaultText = document.querySelector(".profile__subtitle");
 let inputName = document.querySelector(".popup__input_type_name");
 let inputAbout = document.querySelector(".popup__input_type_about");
 
@@ -11,8 +11,8 @@ btnPopupClose.addEventListener("click", popupClose);
 
 function popupOpen() {
     popupContainer.classList.add("popup_opened");
-    inputName.value = TitleDefaultText.textContent;
-    inputAbout.value = SubtitleDefaultText.textContent;
+    inputName.value = titleDefaultText.textContent;
+    inputAbout.value = subtitleDefaultText.textContent;
 }
 
 function popupClose() {
@@ -25,8 +25,8 @@ popupForm.addEventListener('submit', infoSave);
 
 function infoSave(evt) {
     evt.preventDefault();
-    TitleDefaultText.textContent = inputName.value;
-    SubtitleDefaultText.textContent = inputAbout.value;
+    titleDefaultText.textContent = inputName.value;
+    subtitleDefaultText.textContent = inputAbout.value;
 
     return popupClose();
 }
