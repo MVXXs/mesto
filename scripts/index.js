@@ -1,12 +1,12 @@
 const btnPopupOpen = document.querySelector(".profile__button-edit");
-const popupContainerEdit = document.querySelector(".popup__edit-profile");
+const popupContainerEdit = document.querySelector(".popup__edit");
 const btnPopupClose = document.querySelector(".popup__closed")
 const titleDefaultText = document.querySelector(".profile__title");
 const subtitleDefaultText = document.querySelector(".profile__subtitle");
 const inputName = document.querySelector(".popup__input_type_name");
 const inputAbout = document.querySelector(".popup__input_type_about");
 const btnPopupAddOpen = document.querySelector(".profile__add-button");
-const popupContainerAdd = document.querySelector(".popup__add-card");
+const popupContainerAdd = document.querySelector(".popup__add");
 const popupImg = document.querySelector('.popup__image-open');
 
 btnPopupOpen.addEventListener("click", openPopup);
@@ -75,7 +75,7 @@ const initialCards = [
   const imageAddCard = document.querySelector('.popup__input_type_link');
   const popupFormAdd = document.forms['add-card'];
   const popupText = document.querySelector('.element__title');
-  const imgContainer = document.querySelector('.popup__image-container');
+  const imgContainer = document.querySelector('.popup__image');
 
   popupFormAdd.addEventListener('submit', addCard);
 
