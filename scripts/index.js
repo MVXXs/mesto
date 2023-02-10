@@ -1,13 +1,13 @@
 const btnPopupOpen = document.querySelector(".profile__button-edit");
-const popupContainerEdit = document.querySelector(".popup__type_edit");
+const popupContainerEdit = document.querySelector(".popup_type_edit");
 const btnPopupClose = document.querySelector(".popup__closed")
 const titleDefaultText = document.querySelector(".profile__title");
 const subtitleDefaultText = document.querySelector(".profile__subtitle");
 const inputName = document.querySelector(".popup__input_type_name");
 const inputAbout = document.querySelector(".popup__input_type_about");
 const btnPopupAddOpen = document.querySelector(".profile__add-button");
-const popupContainerAdd = document.querySelector(".popup__type_add");
-const popupImg = document.querySelector('.popup__type_image');
+const popupContainerAdd = document.querySelector(".popup_type_add");
+const popupImg = document.querySelector('.popup_type_image');
 
 btnPopupOpen.addEventListener("click", openPopup);
 btnPopupClose.addEventListener("click", closePopup);
