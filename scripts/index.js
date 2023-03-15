@@ -36,7 +36,7 @@ function closePopup(popup) {
   document.removeEventListener('keydown', closePopupWithEsc);
 }
 
-function saveInfo(evt) {
+function saveProfileInfo(evt) {
   evt.preventDefault();
   titleProfileDefaultText.textContent = inputNameProfilePopup.value;
   subtitleProfileDefaultText.textContent = inputAboutProfilePopup.value;
@@ -45,12 +45,12 @@ function saveInfo(evt) {
 }
 
 const createCard = (data) => {
-  const card = new Card(data, '#cards', imageOpen);
+  const card = new Card(data, '#cards', handleCardClick);
 
   return card.generateCard();
 }
 
-const imageOpen = (item) => {
+const handleCardClick = (item) => {
   openPopup(popupImage);
   imageContainer.src = item.link;
   textContainer.textContent = item.name;
@@ -100,8 +100,6 @@ btnEditProfilePopupClose.addEventListener('click', () => {
 btnCardAddPopupOpen.addEventListener('click', () =>{
   openPopup(cardAddPopup);
   popupCardAddForm.reset();
-  const btnCreate = popupCardAddForm.querySelector(validationConfig.submitButtonSelector);
-  btnCreate.classList.add(validationConfig.inactiveButtonClass);
   cardAddValidation.resetValidation();
 });
 
@@ -113,7 +111,7 @@ imagePopupClose.addEventListener('click', () => {
   closePopup(popupImage);
 });
 
-popupProfileEditForm.addEventListener('submit', saveInfo);
+popupProfileEditForm.addEventListener('submit', saveProfileInfo);
 
 popupCardAddForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
