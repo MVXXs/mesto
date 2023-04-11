@@ -17,8 +17,6 @@ const inputAboutProfilePopup = document.querySelector('.popup__input_type_about'
 const btnCardAddPopupOpen = document.querySelector('.profile__add-button');
 
 const elementsSection = document.querySelector('.elements');
-const titleAddCard = document.querySelector('.popup__input_type_title');
-const imageAddCard = document.querySelector('.popup__input_type_link');
 
 const imagePopup = new PopupWithImage('.popup_type_image');
 
@@ -51,8 +49,8 @@ const popupEditProfile = new PopupWithForm('.popup_type_edit', {
 })
 
 const popupAddCard = new PopupWithForm('.popup_type_add', {
-  submitFormCallback: () => {
-    const card = createCard({name: titleAddCard.value, link: imageAddCard.value});
+  submitFormCallback: (data) => {
+    const card = createCard({name: data.name, link: data.about});
     cardRender.addItem(card);
     popupAddCard.close();
   }
