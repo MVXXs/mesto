@@ -167,6 +167,7 @@ btnCardAddPopupOpen.addEventListener('click', () => {
 
 btnEditAvatar.addEventListener('click', () => {
   popupEditAvatar.open();
+  avatarEditValidation.resetValidation();
 })
 
 imagePopup.setEventListeners();
