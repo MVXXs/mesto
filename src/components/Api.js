@@ -37,7 +37,6 @@ class Api {
         .then (this._checkDataError);
     }
 
-
     editAvatar(data) {
         return fetch(`${this._baseUrl}/users/me/avatar`, {
             method: 'PATCH',
@@ -48,7 +47,6 @@ class Api {
         })
         .then (this._checkDataError);
     }
-
 
     addNewCard(data) {
         return fetch(`${this._baseUrl}/cards`, {
@@ -61,7 +59,6 @@ class Api {
         })
         .then (this._checkDataError);
     }
-
 
     deleteCard(cardId) {
         return fetch(`${this._baseUrl}/cards/${cardId}`, {
@@ -97,8 +94,6 @@ class Api {
         })
         .then (this._checkDataError);
     }
-
-
 }
 
 export { Api };
