@@ -34,4 +34,13 @@ const validationConfig = {
     errorClass: 'popup__error_type_active'
 }; 
 
-export { initialCards, validationConfig };
+const apiInfo = {
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-63',
+  headers: {
+    authorization: 'c177f724-436a-45c6-ba61-4894fa030533',
+    'Content-Type': 'application/json'
+  }
+}
+
+
+export { initialCards, validationConfig, apiInfo };
