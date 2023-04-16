@@ -55,9 +55,12 @@ class Card {
         return this._cardLikes.find((like) => like._id === this._userId) 
     }
 
-    _handleLikeCard() {
+    toggleButtonLike() {
         this._elementLike.classList.toggle('element__like_active');
-        this._elementLike.classList.contains('element__like_active') ? this._setLike(this._id) : this._deleteLike(this._id);
+    }
+
+    _handleLikeCard() {
+        this._elementLike.classList.contains('element__like_active') ? this._deleteLike(this._id) : this._setLike(this._id);
     }
 
     handleDeleteCard() {

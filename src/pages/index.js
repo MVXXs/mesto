@@ -48,6 +48,7 @@ const createCard = (data, user) => {
     handleCardLike: (cardId) => {
       api.setLike(cardId)
       .then((item) => {
+        card.toggleButtonLike();
         card.viewLikes(item);
       })
       .catch((err) => {
@@ -57,6 +58,7 @@ const createCard = (data, user) => {
     handleDeleteLike: (cardId) => {
       api.deleteLike(cardId)
       .then((item) => {
+        card.toggleButtonLike();
         card.viewLikes(item);
       })
       .catch((err) => { 
